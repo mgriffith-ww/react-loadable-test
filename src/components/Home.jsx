@@ -16,10 +16,13 @@ class Home extends React.Component {
         return(
             <section>
                 <section style={styles}>
-                    <Button variant="outline-primary"><NavLink to="/about">About Us</NavLink></Button>
+                    <h1>Welcome! This is a dummy app for code splitting with React-Loadable!</h1>
                 </section>
                 <section style={styles}>
-                    <Button variant="outline-primary"><NavLink to="/info">Information</NavLink></Button>
+                <NavLink to="/about"><Button variant="outline-primary">About This Project</Button></NavLink>
+                </section>
+                <section style={styles}>
+                <NavLink to="/info"><Button variant="outline-primary">Information</Button></NavLink>
                 </section>
             </section>
         )

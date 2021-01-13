@@ -35,8 +35,36 @@ class Table extends React.Component {
                 "variations": []
             },
             {
-                "experimentId": 73,
+                "experimentId": 75,
                 "experimentName": "102",
+                "experimentDescription": "desc",
+                "experimentTextId": "expUnn1090",
+                "isEnabled": true,
+                "ownerId": 1,
+                "appId": 1,
+                "status": 1,
+                "createTime": "2021-01-07T08:41:26.953Z",
+                "updateTime": "2021-01-07T08:41:26.953Z",
+                "environment": 0,
+                "variations": []
+            },
+            {
+                "experimentId": 73,
+                "experimentName": "103",
+                "experimentDescription": "desc",
+                "experimentTextId": "expUnn1090",
+                "isEnabled": true,
+                "ownerId": 1,
+                "appId": 1,
+                "status": 1,
+                "createTime": "2021-01-07T08:41:26.953Z",
+                "updateTime": "2021-01-07T08:41:26.953Z",
+                "environment": 0,
+                "variations": []
+            },
+            {
+                "experimentId": 74,
+                "experimentName": "104",
                 "experimentDescription": "desc",
                 "experimentTextId": "expUnn1090",
                 "isEnabled": true,
@@ -91,15 +119,15 @@ class Table extends React.Component {
         return(
             <section>
                 <BootstrapTable
-							keyField="name"
+							keyField="experimentId"
 							data={ allExperiments }
 							columns={ columns }
 							bordered={ false }
 							/>
-            <section>
-                <Button variant="outline-primary"><NavLink 
-						  exact={true}  to='/'>Back</NavLink></Button>
-            </section>
+                <section>
+                <NavLink 
+                    exact={true}  to='/'><Button variant="outline-primary">Back</Button></NavLink>
+                </section>
 
             </section>
 
