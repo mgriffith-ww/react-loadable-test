@@ -10,8 +10,7 @@ class Home extends React.Component {
             fontFamily: "sans-serif",
             textAlign: "center",
             marginTop:50,
-            marginLeft:50
-            
+            marginLeft:50,       
           };
         return(
             <section>
@@ -19,11 +18,15 @@ class Home extends React.Component {
                     <h1>Welcome! This is a dummy app for code splitting with React-Loadable!</h1>
                 </section>
                 <section style={styles}>
-                <NavLink to="/about"><Button variant="outline-primary">About This Project</Button></NavLink>
+                <NavLink to="/about"><Button variant="outline-primary">Basic Example</Button></NavLink>
                 </section>
                 <section style={styles}>
-                <NavLink to="/info"><Button variant="outline-primary">Information</Button></NavLink>
+                <NavLink to="/info"><Button variant="outline-primary">Table Example</Button></NavLink>
                 </section>
+                <section style={styles}>
+                <NavLink to="/fetch"><Button variant="outline-primary">Fetch Example</Button></NavLink>
+                </section>
+                
             </section>
         )
     }

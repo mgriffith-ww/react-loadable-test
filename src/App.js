@@ -1,11 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Route , Link} from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Loadable from "react-loadable";
 import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'react-bootstrap';
-
-
 
 const styles = {
     fontFamily: "sans-serif",
@@ -14,23 +11,31 @@ const styles = {
     marginLeft:50
     
   };
+
+  const Loader = (props) => {
+	if (props.error) {
+		return <div>Oh no, something went wrong!</div>;
+	} else if (props.delay) {
+		return <h2>Loading...</h2>
+	} else {
+		return null;
+	}
+}
   const LoadableAbout = Loadable({
     loader: () => import('../src/components/About.jsx'),
-    loading() {
-        return <h1>Loading split out code</h1>
-    }
+    loading:Loader
   });
   const LoadableTable = Loadable({
     loader: () => import('../src/components/Table.jsx'),
-    loading() {
-        return <h1>Loading split out code</h1>
-    }
+    loading:Loader
   });
   const LoadableHome = Loadable({
     loader: () => import('../src/components/Home.jsx'),
-    loading() {
-        return <h1>Loading split out code</h1>
-    }
+    loading:Loader
+  });
+  const LoadableFetch = Loadable({
+    loader: () => import('../src/components/FetchExample.jsx'),
+    loading:Loader
   });
 class App extends React.Component {
     render() {
@@ -44,6 +49,9 @@ class App extends React.Component {
                 </Route>
                 <Route exact path="/info">
                     <LoadableTable/>
+                </Route>
+                <Route exact path="/fetch">
+                    <LoadableFetch/>
                 </Route>
           </Router>
       );
