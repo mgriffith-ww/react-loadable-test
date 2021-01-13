@@ -12,7 +12,7 @@ const styles = {
     
   };
   const LoadableAbout = Loadable({
-    loader: () => import('../src/components/About'),
+    loader: () => import('../src/components/About.jsx'),
     loading() {
         return <h1>Loading split out code</h1>
     }
