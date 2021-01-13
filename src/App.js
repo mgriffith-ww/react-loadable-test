@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route , Link} from 'react-router-dom';
 import Loadable from "react-loadable";
 import "./index.css"
 
+
 const styles = {
     fontFamily: "sans-serif",
     textAlign: "center",
@@ -11,7 +12,7 @@ const styles = {
     
   };
   const LoadableAbout = Loadable({
-    loader: () => import('./About'),
+    loader: () => import('../src/components/About'),
     loading() {
         return <h1>Loading split out code</h1>
     }
