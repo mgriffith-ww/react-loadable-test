@@ -118,6 +118,7 @@ class Table extends React.Component {
         ]
         return(
             <section>
+                <h1>Below is a Dummy Table to simulate loading data</h1>
                 <BootstrapTable
 							keyField="experimentId"
 							data={ allExperiments }
